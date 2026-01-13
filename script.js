@@ -567,7 +567,7 @@ function createPrintableCV() {
             <h3><a href="https://www.veev.com/" target="_blank" class="company-link">VEEV</a></h3>
             <span class="job-date">2020 → Present</span>
         </div>
-        <div class="job-title">Product Manager (Team Lead 2021-2023) | Tel Aviv, Israel</div>
+        <div class="job-title">Product Manager Team Lead 2021-2023 | Tel Aviv, Israel</div>
         <div class="job-summary">
             Led AI-powered construction software platform serving office users, fabrication teams, and site workers across desktop CAD, web, mobile, BI, and data systems.
         </div>
