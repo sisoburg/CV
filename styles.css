@@ -925,7 +925,7 @@ body {
 }
 
 .timeline-item.active .job-details-collapsible {
-  max-height: 1000px;
+  max-height: 3000px;
 }
 
 .job-title {
@@ -1451,6 +1451,7 @@ body {
 
   .hero {
     padding: var(--space-xl);
+    padding-bottom: 8rem; /* Ensure space for scroll indicator */
   }
 
   .name-line {
