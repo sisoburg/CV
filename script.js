@@ -590,13 +590,13 @@ function createPrintableCV() {
         </div>
         <div class="job-title">Computational Designer | Tel Aviv, Israel</div>
         <div class="job-summary">
-            Led technology-driven projects including NASA Mars Habitat Challenge, applying algorithmic design to complex spatial problems.
+            Applying <span class="highlight-text">computational design</span> and <span class="highlight-text">generative design</span> solutions for real-life planning and architecture problems. Implemented urban planning with computational design for <span class="highlight-text">Tel Aviv Municipality</span>.
         </div>
         <ul class="achievements">
-            <li><span class="achievement-title">Mars Habitat:</span> Led <span class="highlight-text">NASA Mars Habitat Challenge</span> project, applying <span class="highlight-text">algorithmic design</span> to complex spatial problems.</li>
             <li><span class="achievement-title">Urban Planning:</span> Developed <span class="highlight-text">computational design solutions</span> for urban planning using <span class="highlight-text">data analysis</span> and <span class="highlight-text">parametric modeling</span>.</li>
             <li><span class="achievement-title">Generative Design:</span> Architected <span class="highlight-text">custom algorithms</span> with <span class="highlight-text">Grasshopper Python</span> for generative design and optimization workflows.</li>
             <li><span class="achievement-title">Multi-disciplinary:</span> Collaborated on residential, public, and urban-scale projects across <span class="highlight-text">multidisciplinary teams</span>.</li>
+            <li><span class="achievement-title">Mars Habitat:</span> Led <span class="highlight-text">NASA Mars Habitat Challenge</span> project, applying <span class="highlight-text">algorithmic design</span> to complex spatial problems.</li>
         </ul>
     </div>
     
@@ -604,6 +604,7 @@ function createPrintableCV() {
         <div class="job-title" style="font-weight: 700;">Additional Experience</div>
         <ul class="achievements">
             <li><strong>Instructor, Bezalel Academy (Fall 2025)</strong> - Teaching computational design to 3rd-year architecture students</li>
+            <li><strong>FABLAB Instructor, Jerusalem FabLab (2015 – 2017)</strong> - Guiding about advanced technologies, digital fabrication, and prototyping in Jerusalem</li>
             <li><strong>Computational Design Architect, ParaGroup (2017)</strong> - Algorithmic design tools for complex projects</li>
             <li><strong>QA Team Lead, SmartType (2012)</strong> - Led QA team for mobile tech startup (founded by Dov Moran)</li>
         </ul>
