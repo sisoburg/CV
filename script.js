@@ -16,9 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function initJobToggles() {
-  // Open the first job by default
-  const firstJob = document.querySelector(".timeline-item.collapsible");
-  if (firstJob) firstJob.classList.add("active");
+  // Open the first job by default - DISABLED per user request
+  // const firstJob = document.querySelector(".timeline-item.collapsible");
+  // if (firstJob) firstJob.classList.add("active");
 }
 
 /**
@@ -296,6 +296,7 @@ function createPrintableCV() {
             margin-bottom: 4px;
             text-transform: uppercase;
             letter-spacing: -0.02em;
+            color: #1a1a1a;
         }
         
         h2 {
@@ -303,9 +304,10 @@ function createPrintableCV() {
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            border-bottom: 2px solid #1a1a1a;
+            border-bottom: 2px solid #5c6bc0;
             padding-bottom: 4px;
             margin: 20px 0 12px 0;
+            color: #2c3e50;
         }
         
         h3 {
@@ -313,10 +315,38 @@ function createPrintableCV() {
             font-weight: 700;
         }
         
+        a {
+            color: #4a7c59;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+
         .header {
             margin-bottom: 20px;
             border-bottom: 1px solid #ddd;
             padding-bottom: 16px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .header-text {
+            flex: 1;
+        }
+
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #5c6bc0;
         }
         
         .title {
@@ -330,12 +360,31 @@ function createPrintableCV() {
             font-family: 'Space Mono', monospace;
             font-size: 8pt;
             color: #666;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            align-items: center;
         }
         
-        .contact span {
-            margin-right: 16px;
+        .contact a {
+            color: #666;
+            text-decoration: none;
+            border-bottom: 1px dotted #ccc;
+            display: inline-flex;
+            align-items: center;
         }
-        
+
+        .linkedin-icon {
+            width: 16px;
+            height: 16px;
+            fill: #0077b5;
+            transition: fill 0.2s;
+        }
+
+        .contact a:hover .linkedin-icon {
+            fill: #004182;
+        }
+
         .summary {
             font-size: 10pt;
             color: #444;
@@ -354,8 +403,9 @@ function createPrintableCV() {
             font-family: 'Space Mono', monospace;
             font-size: 8pt;
             padding: 4px 8px;
-            border: 1px solid #ccc;
+            border: 1px solid #e0e0dc;
             background: #f5f5f5;
+            border-left: 2px solid #5c6bc0;
         }
         
         .job {
@@ -367,6 +417,18 @@ function createPrintableCV() {
             justify-content: space-between;
             align-items: baseline;
             margin-bottom: 4px;
+        }
+
+        .company-link {
+            color: #1a1a1a;
+            text-decoration: none;
+            border-bottom: 1px dotted #999;
+            transition: color 0.2s;
+        }
+        
+        .company-link:hover {
+            color: #5c6bc0;
+            border-bottom-color: #5c6bc0;
         }
         
         .job-title {
@@ -381,14 +443,49 @@ function createPrintableCV() {
             color: #666;
         }
         
+        .job-summary {
+            font-size: 9.5pt;
+            color: #444;
+            margin-top: 4px;
+            margin-bottom: 8px;
+            line-height: 1.4;
+            font-style: italic;
+        }
+
         .achievements {
-            margin-left: 16px;
+            margin-left: 0;
             margin-top: 8px;
+            list-style-type: none;
         }
         
         .achievements li {
-            margin-bottom: 4px;
+            margin-bottom: 6px;
             font-size: 9pt;
+            position: relative;
+            padding-left: 12px;
+        }
+        
+        .achievements li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #5c6bc0;
+        }
+
+        .achievement-title {
+            font-weight: 700;
+            color: #2c3e50;
+            margin-right: 4px;
+        }
+
+        .highlight-text {
+            font-weight: 600;
+            background: rgba(92, 107, 192, 0.12);
+            padding: 0 3px;
+            border-radius: 3px;
+            color: #1a1a1a;
+            box-decoration-break: clone;
+            -webkit-box-decoration-break: clone;
         }
         
         .edu-item {
@@ -405,7 +502,7 @@ function createPrintableCV() {
             font-size: 8pt;
             font-weight: 700;
             min-width: 100px;
-            color: #666;
+            color: #5c6bc0;
         }
         
         .skills-value {
@@ -415,6 +512,8 @@ function createPrintableCV() {
         @media print {
             body {
                 padding: 0;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
             }
             @page {
                 margin: 0.5in;
@@ -424,31 +523,40 @@ function createPrintableCV() {
 </head>
 <body>
     <div class="header">
-        <h1>Noam Burg</h1>
-        <div class="title">Technical Product Manager</div>
-        <div class="contact">
-            <span>Tel Aviv, Israel</span>
-            <span>+972 545-555-656</span>
-            <span>sisoburg@gmail.com</span>
-            <span>linkedin.com/in/noamburg</span>
+        <div class="header-content">
+            <div class="header-text">
+                <h1>Noam Burg</h1>
+                <div class="title">Technical Product Manager</div>
+                <div class="contact">
+                    <span>Nataf, Israel</span>
+                    <a href="tel:+972545555656">+972 545-555-656</a>
+                    <a href="mailto:sisoburg@gmail.com">sisoburg@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/noam-burg-0ab48b14a/" target="_blank" title="LinkedIn Profile">
+                        <svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <p class="summary">
+                    Technical Product Manager combining construction tech expertise with hands-on AI product development. 
+                    5+ years leading complex software products across desktop, web, mobile, and data systems - 
+                    from office engineers to factory floor to construction sites.
+                </p>
+            </div>
+            <img src="profile.jpg" alt="Noam Burg" class="profile-pic">
         </div>
-        <p class="summary">
-            Technical Product Manager combining construction tech expertise with hands-on AI product development. 
-            5+ years leading complex software products across desktop, web, mobile, and data systems - 
-            from office engineers to factory floor to construction sites.
-        </p>
     </div>
     
     <h2>Core Competencies</h2>
     <div class="competencies">
         <span class="competency">AI Product Development</span>
-        <span class="competency">Construction Tech & BIM</span>
-        <span class="competency">Product Strategy & Roadmapping</span>
-        <span class="competency">Manufacturing & Site Operations</span>
-        <span class="competency">Multi-Platform Development</span>
         <span class="competency">Algorithmic Solution Design</span>
+        <span class="competency">CAD Automation & Optimization</span>
+        <span class="competency">Multi-Platform Development</span>
+        <span class="competency">Product Strategy & Roadmapping</span>
         <span class="competency">Product Team Leadership</span>
-        <span class="competency">Agile/Scrum Methodologies</span>
+        <span class="competency">Construction Tech & BIM</span>
+        <span class="competency">Manufacturing & Site Operations</span>
         <span class="competency">ERP/PLM System Integration</span>
     </div>
     
@@ -456,33 +564,39 @@ function createPrintableCV() {
     
     <div class="job">
         <div class="job-header">
-            <h3>VEEV</h3>
+            <h3><a href="https://www.veev.com/" target="_blank" class="company-link">VEEV</a></h3>
             <span class="job-date">2020 → Present</span>
         </div>
         <div class="job-title">Product Manager (Team Lead 2021-2023) | Tel Aviv, Israel</div>
+        <div class="job-summary">
+            Led AI-powered construction software platform serving office users, fabrication teams, and site workers across desktop CAD, web, mobile, BI, and data systems.
+        </div>
         <ul class="achievements">
-            <li>Led AI-powered construction software platform serving office users, fabrication teams, and site workers across desktop CAD, web, mobile, BI, and data systems</li>
-            <li>Designed and shipped AI-based automatic QC system for 3D model validation, integrating LLM capabilities and reducing manual engineering review time</li>
-            <li>Developed Model Context Protocol (MCP) integration for Revit, enabling real-time data synchronization across BIM workflows</li>
-            <li>Built intelligent chatbot with data warehouse integration, architecting workflows using LLM APIs</li>
-            <li>Created geometric optimization algorithms with technical leads for automated fabrication processes</li>
-            <li>Led product team of 3 PMs (2021-2023), establishing roadmaps and strategic initiatives</li>
-            <li>Managed agile development with R&D team of ~10 engineers and QA</li>
-            <li>Delivered tools for operational teams including fabrication instruction systems, factory floor QC interfaces, and mobile apps for site workers</li>
+            <li><span class="achievement-title">AI QC System:</span> Designed and shipped <span class="highlight-text">AI-based automatic QC system</span> for 3D model validation, integrating <span class="highlight-text">LLM capabilities</span> and reducing manual engineering review time.</li>
+            <li><span class="achievement-title">Model Connectivity:</span> Developed <span class="highlight-text">Model Context Protocol (MCP)</span> integration for Revit, enabling <span class="highlight-text">real-time data synchronization</span> across BIM workflows.</li>
+            <li><span class="achievement-title">Intelligent Chatbot:</span> Built <span class="highlight-text">intelligent chatbot</span> with data warehouse integration, architecting workflows using <span class="highlight-text">LLM APIs</span>.</li>
+            <li><span class="achievement-title">Design Automation:</span> Led the development of <span class="highlight-text">Design Automation CAD tools</span>, streamlining complex engineering workflows and optimizing geometric data processing.</li>
+            <li><span class="achievement-title">Geometric Optimization:</span> Created <span class="highlight-text">geometric optimization algorithms</span> (high-level logic) with technical leads for <span class="highlight-text">automated fabrication processes</span>.</li>
+            <li><span class="achievement-title">Team Management:</span> <span class="highlight-text">Led product team of 3 PMs</span> (2021-2023), establishing roadmaps and strategic initiatives until team restructuring.</li>
+            <li><span class="achievement-title">Agile Execution:</span> Managed <span class="highlight-text">agile development</span> with R&D team of ~10 engineers, working directly in <span class="highlight-text">GitHub</span> and prototyping in <span class="highlight-text">Cursor IDE</span>.</li>
+            <li><span class="achievement-title">Operational Tools:</span> Delivered tools for operational teams including <span class="highlight-text">fabrication instruction systems</span>, factory floor <span class="highlight-text">QC interfaces</span>, and mobile apps for site workers.</li>
         </ul>
     </div>
     
     <div class="job">
         <div class="job-header">
-            <h3>HQ ARCHITECTS</h3>
+            <h3><a href="https://www.hqa.co.il/" target="_blank" class="company-link">HQ ARCHITECTS</a></h3>
             <span class="job-date">2018 → 2020</span>
         </div>
         <div class="job-title">Computational Designer | Tel Aviv, Israel</div>
+        <div class="job-summary">
+            Led technology-driven projects including NASA Mars Habitat Challenge, applying algorithmic design to complex spatial problems.
+        </div>
         <ul class="achievements">
-            <li>Led technology-driven projects including NASA Mars Habitat Challenge</li>
-            <li>Developed computational design solutions for urban planning using data analysis and parametric modeling</li>
-            <li>Architected custom algorithms with Grasshopper Python for generative design and optimization workflows</li>
-            <li>Collaborated on residential, public, and urban-scale projects across multidisciplinary teams</li>
+            <li><span class="achievement-title">Mars Habitat:</span> Led <span class="highlight-text">NASA Mars Habitat Challenge</span> project, applying <span class="highlight-text">algorithmic design</span> to complex spatial problems.</li>
+            <li><span class="achievement-title">Urban Planning:</span> Developed <span class="highlight-text">computational design solutions</span> for urban planning using <span class="highlight-text">data analysis</span> and <span class="highlight-text">parametric modeling</span>.</li>
+            <li><span class="achievement-title">Generative Design:</span> Architected <span class="highlight-text">custom algorithms</span> with <span class="highlight-text">Grasshopper Python</span> for generative design and optimization workflows.</li>
+            <li><span class="achievement-title">Multi-disciplinary:</span> Collaborated on residential, public, and urban-scale projects across <span class="highlight-text">multidisciplinary teams</span>.</li>
         </ul>
     </div>
     
@@ -521,14 +635,6 @@ function createPrintableCV() {
     <div class="skills-row">
         <span class="skills-label">CAD/3D:</span>
         <span class="skills-value">Rhino, Grasshopper, Grasshopper Python, Revit, AutoCAD, Solidworks</span>
-    </div>
-    <div class="skills-row">
-        <span class="skills-label">Design:</span>
-        <span class="skills-value">Adobe Creative Suite</span>
-    </div>
-    <div class="skills-row">
-        <span class="skills-label">Languages:</span>
-        <span class="skills-value">Hebrew (Native), English (Fluent), French (Speaking)</span>
     </div>
 </body>
 </html>

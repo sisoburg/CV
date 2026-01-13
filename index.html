@@ -19,6 +19,29 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+    <!-- Open Graph / LinkedIn -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Noam Burg | Technical Product Manager" />
+    <meta
+      property="og:description"
+      content="Technical Product Manager combining construction tech expertise with hands-on AI product development. 5+ years leading complex software products."
+    />
+    <meta property="og:image" content="profile.jpg" />
+    <meta property="og:url" content="https://sisoburg.github.io/CV/" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Noam Burg | Technical Product Manager"
+    />
+    <meta
+      name="twitter:description"
+      content="5+ years leading complex software products across AI, BIM, and construction tech."
+    />
+    <meta name="twitter:image" content="profile.jpg" />
   </head>
   <body>
     <!-- Grid Background -->
@@ -31,10 +54,10 @@
         <span class="logo-dot"></span>
       </div>
       <div class="nav-links">
+        <a href="#skills" class="nav-link" data-section="skills">Skills</a>
         <a href="#experience" class="nav-link" data-section="experience"
           >Experience</a
         >
-        <a href="#skills" class="nav-link" data-section="skills">Skills</a>
         <a href="#education" class="nav-link" data-section="education"
           >Education</a
         >
@@ -75,16 +98,18 @@
                 <span class="contact-text">+972 545-555-656</span>
               </a>
               <a
-                href="https://linkedin.com/in/noamburg"
+                href="https://www.linkedin.com/in/noam-burg-0ab48b14a/"
                 target="_blank"
                 class="contact-item"
               >
-                <span class="contact-icon">in</span>
-                <span class="contact-text">linkedin.com/in/noamburg</span>
+                <span class="contact-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </span>
+                <span class="contact-text">linkedin.com/in/noam-burg</span>
               </a>
               <span class="contact-item">
                 <span class="contact-icon">◉</span>
-                <span class="contact-text">Tel Aviv, Israel</span>
+                <span class="contact-text">Nataf, Israel</span>
               </span>
             </div>
           </div>
@@ -127,77 +152,144 @@
           <span class="section-line"></span>
         </div>
         <div class="competencies-grid">
-          <div class="competency-card" data-category="ai" data-description="Architecting LLM-driven workflows and RAG systems for industrial applications.">
+          <!-- AI and Technology -->
+          <div
+            class="competency-card"
+            data-category="ai"
+            data-description="Architecting LLM-driven workflows and RAG systems for industrial applications."
+          >
             <div class="card-icon">◈</div>
             <h3 class="card-title">AI Product Development</h3>
             <div class="card-bar">
               <div class="bar-fill" style="--fill-width: 95%"></div>
             </div>
-            <div class="card-desc">Architecting LLM-driven workflows and RAG systems for industrial applications.</div>
-          </div>
-          <div class="competency-card" data-category="construction" data-description="Bridging the gap between 3D engineering data and real-world site operations.">
-            <div class="card-icon">◇</div>
-            <h3 class="card-title">Construction Tech & BIM</h3>
-            <div class="card-bar">
-              <div class="bar-fill" style="--fill-width: 90%"></div>
+            <div class="card-desc">
+              Architecting LLM-driven workflows and RAG systems for industrial
+              applications.
             </div>
-            <div class="card-desc">Bridging the gap between 3D engineering data and real-world site operations.</div>
           </div>
-          <div class="competency-card" data-category="strategy" data-description="Defining vision and technical roadmaps from zero-to-one in complex domains.">
-            <div class="card-icon">○</div>
-            <h3 class="card-title">Product Strategy & Roadmapping</h3>
-            <div class="card-bar">
-              <div class="bar-fill" style="--fill-width: 92%"></div>
-            </div>
-            <div class="card-desc">Defining vision and technical roadmaps from zero-to-one in complex domains.</div>
-          </div>
-          <div class="competency-card" data-category="manufacturing" data-description="Digitizing factory floors with real-time instruction and QC systems.">
-            <div class="card-icon">□</div>
-            <h3 class="card-title">Manufacturing & Site Operations</h3>
-            <div class="card-bar">
-              <div class="bar-fill" style="--fill-width: 85%"></div>
-            </div>
-            <div class="card-desc">Digitizing factory floors with real-time instruction and QC systems.</div>
-          </div>
-          <div class="competency-card" data-category="platform" data-description="Leading engineering teams across Desktop CAD, Web apps, and Mobile field tools.">
-            <div class="card-icon">△</div>
-            <h3 class="card-title">Multi-Platform Development</h3>
-            <div class="card-bar">
-              <div class="bar-fill" style="--fill-width: 88%"></div>
-            </div>
-            <div class="card-desc">Leading engineering teams across Desktop CAD, Web apps, and Mobile field tools.</div>
-          </div>
-          <div class="competency-card" data-category="algorithm" data-description="Developing custom geometry optimization and automation logic in Python/GH.">
+          <div
+            class="competency-card"
+            data-category="algorithm"
+            data-description="Developing custom geometry optimization and automation logic in Python/GH."
+          >
             <div class="card-icon">⬡</div>
             <h3 class="card-title">Algorithmic Solution Design</h3>
             <div class="card-bar">
               <div class="bar-fill" style="--fill-width: 87%"></div>
             </div>
-            <div class="card-desc">Developing custom geometry optimization and automation logic in Python/GH.</div>
+            <div class="card-desc">
+              Developing custom geometry optimization and automation logic in
+              Python/GH.
+            </div>
           </div>
-          <div class="competency-card" data-category="leadership" data-description="Scaling product teams and mentoring PMs while managing R&D execution.">
+          <div
+             class="competency-card"
+             data-category="automation"
+             data-description="Streamlining complex engineering workflows and optimizing geometric data processing."
+          >
+            <div class="card-icon">⚙</div>
+            <h3 class="card-title">CAD Automation & Optimization</h3>
+            <div class="card-bar">
+              <div class="bar-fill" style="--fill-width: 93%"></div>
+            </div>
+            <div class="card-desc">
+              Streamlining complex engineering workflows and optimizing geometric data processing.
+            </div>
+          </div>
+          <div
+            class="competency-card"
+            data-category="platform"
+            data-description="Leading engineering teams across Desktop CAD, Web apps, and Mobile field tools."
+          >
+            <div class="card-icon">△</div>
+            <h3 class="card-title">Multi-Platform Development</h3>
+            <div class="card-bar">
+              <div class="bar-fill" style="--fill-width: 88%"></div>
+            </div>
+            <div class="card-desc">
+              Leading engineering teams across Desktop CAD, Web apps, and Mobile
+              field tools.
+            </div>
+          </div>
+
+          <!-- Product Related Stuff -->
+          <div
+            class="competency-card"
+            data-category="strategy"
+            data-description="Defining vision and technical roadmaps from zero-to-one in complex domains."
+          >
+            <div class="card-icon">○</div>
+            <h3 class="card-title">Product Strategy & Roadmapping</h3>
+            <div class="card-bar">
+              <div class="bar-fill" style="--fill-width: 92%"></div>
+            </div>
+            <div class="card-desc">
+              Defining vision and technical roadmaps from zero-to-one in complex
+              domains.
+            </div>
+          </div>
+          <div
+            class="competency-card"
+            data-category="leadership"
+            data-description="Scaling product teams and mentoring PMs while managing R&D execution."
+          >
             <div class="card-icon">◎</div>
             <h3 class="card-title">Product Team Leadership</h3>
             <div class="card-bar">
               <div class="bar-fill" style="--fill-width: 90%"></div>
             </div>
-            <div class="card-desc">Scaling product teams and mentoring PMs while managing R&D execution.</div>
-          </div>
-          <div class="competency-card" data-category="agile" data-description="Optimizing delivery cycles through GitHub-centric workflows and fast prototyping.">
-            <div class="card-icon">⊕</div>
-            <h3 class="card-title">Agile/Scrum Methodologies</h3>
-            <div class="card-bar">
-              <div class="bar-fill" style="--fill-width: 93%"></div>
+            <div class="card-desc">
+              Scaling product teams and mentoring PMs while managing R&D
+              execution.
             </div>
-            <div class="card-desc">Optimizing delivery cycles through GitHub-centric workflows and fast prototyping.</div>
           </div>
-          <div class="competency-card" data-category="erp" data-description="Streamlining data flow between design software and production databases.">
+          <div
+            class="competency-card"
+            data-category="construction"
+            data-description="Bridging the gap between 3D engineering data and real-world site operations."
+          >
+            <div class="card-icon">◇</div>
+            <h3 class="card-title">Construction Tech & BIM</h3>
+            <div class="card-bar">
+              <div class="bar-fill" style="--fill-width: 90%"></div>
+            </div>
+            <div class="card-desc">
+              Bridging the gap between 3D engineering data and real-world site
+              operations.
+            </div>
+          </div>
+          <div
+            class="competency-card"
+            data-category="manufacturing"
+            data-description="Digitizing factory floors with real-time instruction and QC systems."
+          >
+            <div class="card-icon">□</div>
+            <h3 class="card-title">Manufacturing & Site Operations</h3>
+            <div class="card-bar">
+              <div class="bar-fill" style="--fill-width: 85%"></div>
+            </div>
+            <div class="card-desc">
+              Digitizing factory floors with real-time instruction and QC
+              systems.
+            </div>
+          </div>
+
+          <!-- Misc -->
+          <div
+            class="competency-card"
+            data-category="erp"
+            data-description="Streamlining data flow between design software and production databases."
+          >
             <div class="card-icon">⊞</div>
             <h3 class="card-title">ERP/PLM System Integration</h3>
             <div class="card-bar">
               <div class="bar-fill" style="--fill-width: 82%"></div>
             </div>
-            <div class="card-desc">Streamlining data flow between design software and production databases.</div>
+            <div class="card-desc">
+              Streamlining data flow between design software and production
+              databases.
+            </div>
           </div>
         </div>
       </section>
@@ -214,13 +306,20 @@
           <!-- VEEV -->
           <div class="timeline-item collapsible" data-company="veev">
             <div class="timeline-marker">
-              <div class="marker-dot"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Veev-logo.png" onerror="this.style.display='none'" class="timeline-logo"></div>
+              <div class="marker-dot"></div>
               <div class="marker-line"></div>
             </div>
             <div class="timeline-content">
               <div class="job-header" onclick="toggleJob(this)">
                 <div class="job-info">
-                  <h3 class="job-company">VEEV <span class="collapse-icon">▾</span></h3>
+                  <h3 class="job-company">
+                    VEEV <span class="collapse-icon">▾</span>
+                  </h3>
+                  <a href="https://www.veev.com/" target="_blank" class="visit-link" onclick="event.stopPropagation()">
+                    <img src="https://i.vimeocdn.com/video/1664187441-14af8a2a2fd49e94a7ba62c2e010386a18bb56d22d1fca6973dd9764a13c576c-d" alt="Veev Logo" class="company-logo-inline">
+                    <span>Visit Site</span>
+                    <span class="external-icon">↗</span>
+                  </a>
                   <span class="job-title"
                     >Product Manager (Team Lead 2021-2023)</span
                   >
@@ -232,49 +331,68 @@
               </div>
               <div class="job-details-collapsible">
                 <div class="job-summary">
-                  Led <strong>AI-powered construction software platform</strong> serving office
-                  users, fabrication teams, and site workers across desktop CAD,
-                  web, mobile, BI, and data systems.
+                  Led
+                  <strong>AI-powered construction software platform</strong>
+                  serving office users, fabrication teams, and site workers
+                  across desktop CAD, web, mobile, BI, and data systems.
                 </div>
                 <div class="job-achievements">
-                  <ul class="achievements-list">
+                  <ul class="achievements-list grid-2-col">
                     <li class="achievement-item">
-                      <span class="achievement-tag ai">AI</span>
-                      Designed and shipped <strong>AI-based automatic QC system</strong> for 3D
-                      model validation, integrating <strong>LLM capabilities</strong> and reducing
-                      manual engineering review time
+                      <div class="achievement-header">
+                        <span class="achievement-tag ai">AI</span>
+                        <h4 class="achievement-title">AI QC System</h4>
+                      </div>
+                      Designed and shipped <strong>AI-based automatic QC system</strong> for 3D model validation, integrating <strong>LLM capabilities</strong> and reducing manual engineering review time.
                     </li>
                     <li class="achievement-item">
-                      <span class="achievement-tag tech">MCP</span>
-                      Developed <strong>Model Context Protocol (MCP)</strong> integration for
-                      Revit, enabling <strong>real-time data synchronization</strong> across BIM
-                      workflows
+                      <div class="achievement-header">
+                        <span class="achievement-tag tech">MCP</span>
+                        <h4 class="achievement-title">Model Connectivity</h4>
+                      </div>
+                      Developed <strong>Model Context Protocol (MCP)</strong> integration for Revit, enabling <strong>real-time data synchronization</strong> across BIM workflows.
                     </li>
                     <li class="achievement-item">
-                      <span class="achievement-tag ai">LLM</span>
-                      Built <strong>intelligent chatbot</strong> with data warehouse integration,
-                      architecting workflows using <strong>LLM APIs</strong>
+                      <div class="achievement-header">
+                        <span class="achievement-tag ai">LLM</span>
+                        <h4 class="achievement-title">Intelligent Chatbot</h4>
+                      </div>
+                      Built <strong>intelligent chatbot</strong> with data warehouse integration, architecting workflows using <strong>LLM APIs</strong>.
                     </li>
                     <li class="achievement-item">
-                      <span class="achievement-tag algorithm">Algorithm</span>
-                      Created <strong>geometric optimization algorithms</strong>
-                      (high-level logic) with technical leads for
-                      <strong>automated fabrication processes</strong>
+                      <div class="achievement-header">
+                        <span class="achievement-tag algorithm">CAD</span>
+                        <h4 class="achievement-title">Design Automation</h4>
+                      </div>
+                      Led the development of <strong>Design Automation CAD tools</strong>, streamlining complex engineering workflows and optimizing geometric data processing.
                     </li>
                     <li class="achievement-item">
-                      <span class="achievement-tag leadership">Leadership</span>
-                      <strong>Led product team of 3 PMs</strong> (2021-2023), establishing roadmaps
-                      and strategic initiatives until team restructuring
+                      <div class="achievement-header">
+                        <span class="achievement-tag algorithm">Algorithm</span>
+                        <h4 class="achievement-title">Geometric Optimization</h4>
+                      </div>
+                      Created <strong>geometric optimization algorithms</strong> (high-level logic) with technical leads for <strong>automated fabrication processes</strong>.
                     </li>
                     <li class="achievement-item">
-                      <span class="achievement-tag agile">Agile</span>
-                      Managed <strong>agile development</strong> with R&D team of ~10 engineers, working directly in <strong>GitHub</strong> and prototyping in <strong>Cursor IDE</strong>
+                      <div class="achievement-header">
+                        <span class="achievement-tag leadership">Leadership</span>
+                        <h4 class="achievement-title">Team Management</h4>
+                      </div>
+                      <strong>Led product team of 3 PMs</strong> (2021-2023), establishing roadmaps and strategic initiatives until team restructuring.
                     </li>
                     <li class="achievement-item">
-                      <span class="achievement-tag operations">Ops</span>
-                      Delivered tools for operational teams including <strong>fabrication
-                      instruction systems</strong>, factory floor <strong>QC interfaces</strong>, and mobile
-                      apps for site workers
+                      <div class="achievement-header">
+                        <span class="achievement-tag agile">Agile</span>
+                        <h4 class="achievement-title">Agile Execution</h4>
+                      </div>
+                      Managed <strong>agile development</strong> with R&D team of ~10 engineers, working directly in <strong>GitHub</strong> and prototyping in <strong>Cursor IDE</strong>.
+                    </li>
+                    <li class="achievement-item">
+                      <div class="achievement-header">
+                        <span class="achievement-tag operations">Ops</span>
+                        <h4 class="achievement-title">Operational Tools</h4>
+                      </div>
+                      Delivered tools for operational teams including <strong>fabrication instruction systems</strong>, factory floor <strong>QC interfaces</strong>, and mobile apps for site workers.
                     </li>
                   </ul>
                 </div>
@@ -284,13 +402,20 @@
 
           <div class="timeline-item collapsible" data-company="hq">
             <div class="timeline-marker">
-              <div class="marker-dot"><div class="marker-icon">HQA</div></div>
+               <div class="marker-dot"></div>
               <div class="marker-line"></div>
             </div>
             <div class="timeline-content">
               <div class="job-header" onclick="toggleJob(this)">
                 <div class="job-info">
-                  <h3 class="job-company">HQ ARCHITECTS <span class="collapse-icon">▾</span></h3>
+                  <h3 class="job-company">
+                    HQ ARCHITECTS <span class="collapse-icon">▾</span>
+                  </h3>
+                  <a href="https://www.hqa.co.il/" target="_blank" class="visit-link" onclick="event.stopPropagation()">
+                    <img src="https://cdn.prod.website-files.com/658a931b9df12209e2129eb6/672b7a3526c5948b43dd6ad5_logoforprofile.jpg" alt="HQ Architects Logo" class="company-logo-inline">
+                    <span>Visit Site</span>
+                    <span class="external-icon">↗</span>
+                  </a>
                   <span class="job-title">Computational Designer</span>
                 </div>
                 <div class="job-meta">
@@ -300,31 +425,39 @@
               </div>
               <div class="job-details-collapsible">
                 <div class="job-summary">
-                  Led technology-driven projects including **NASA Mars Habitat
-                  Challenge**, applying **algorithmic design** to complex spatial
-                  problems.
+                  Led technology-driven projects including <strong>NASA Mars Habitat
+                  Challenge</strong>, applying <strong>algorithmic design</strong> to complex
+                  spatial problems.
                 </div>
                 <div class="job-achievements">
-                  <ul class="achievements-list">
+                  <ul class="achievements-list grid-2-col">
                     <li class="achievement-item">
-                      <span class="achievement-tag special">NASA</span>
-                      Led **NASA Mars Habitat Challenge** project, applying
-                      **algorithmic design** to complex spatial problems
+                      <div class="achievement-header">
+                        <span class="achievement-tag special">NASA</span>
+                        <h4 class="achievement-title">Mars Habitat</h4>
+                      </div>
+                      Led <strong>NASA Mars Habitat Challenge</strong> project, applying <strong>algorithmic design</strong> to complex spatial problems.
                     </li>
                     <li class="achievement-item">
-                      <span class="achievement-tag data">Data</span>
-                      Developed **computational design solutions** for urban planning
-                      using **data analysis** and **parametric modeling**
+                      <div class="achievement-header">
+                        <span class="achievement-tag data">Data</span>
+                        <h4 class="achievement-title">Urban Planning</h4>
+                      </div>
+                      Developed <strong>computational design solutions</strong> for urban planning using <strong>data analysis</strong> and <strong>parametric modeling</strong>.
                     </li>
                     <li class="achievement-item">
-                      <span class="achievement-tag algorithm">Python</span>
-                      Architected **custom algorithms** with **Grasshopper Python** for
-                      generative design and optimization workflows
+                      <div class="achievement-header">
+                        <span class="achievement-tag algorithm">Python</span>
+                        <h4 class="achievement-title">Generative Design</h4>
+                      </div>
+                      Architected <strong>custom algorithms</strong> with <strong>Grasshopper Python</strong> for generative design and optimization workflows.
                     </li>
                     <li class="achievement-item">
-                      <span class="achievement-tag team">Collab</span>
-                      Collaborated on residential, public, and urban-scale
-                      projects across **multdisciplinary teams**
+                      <div class="achievement-header">
+                        <span class="achievement-tag team">Collab</span>
+                        <h4 class="achievement-title">Multi-disciplinary</h4>
+                      </div>
+                      Collaborated on residential, public, and urban-scale projects across <strong>multdisciplinary teams</strong>.
                     </li>
                   </ul>
                 </div>
@@ -335,45 +468,51 @@
           <!-- Additional Experience -->
           <div class="timeline-item additional" data-company="additional">
             <div class="timeline-marker">
-              <div class="marker-dot small"></div>
+              <div class="marker-dot"></div>
+              <div class="marker-line"></div>
             </div>
             <div class="timeline-content compact">
               <h4 class="additional-title">Additional Experience</h4>
               <div class="additional-grid">
                 <div class="additional-item">
-                  <span class="additional-role">Instructor</span>
+                  <div class="additional-header">
+                    <h4 class="additional-role">Instructor</h4>
+                    <span class="additional-date">Fall 2025</span>
+                  </div>
                   <span class="additional-org">Bezalel Academy</span>
-                  <span class="additional-date">Fall 2025</span>
-                  <span class="additional-desc"
-                    >Teaching <strong>computational design</strong> to 3rd-year architecture
-                    students</span
-                  >
+                  <div class="additional-desc">
+                    Teaching <strong>computational design</strong> to 3rd-year architecture students
+                  </div>
                 </div>
                 <div class="additional-item">
-                   <span class="additional-role">FABLAB Instructor</span>
+                  <div class="additional-header">
+                    <h4 class="additional-role">FABLAB Instructor</h4>
+                    <span class="additional-date">2015 – 2017</span>
+                  </div>
                   <span class="additional-org">Jerusalem FabLab</span>
-                  <span class="additional-date">2015 – 2017</span>
-                  <span class="additional-desc"
-                    >Guiding about <strong>advanced technologies</strong>, digital fabrication, and prototyping in Jerusalem</span
-                  >
+                  <div class="additional-desc">
+                    Guiding about <strong>advanced technologies</strong>, digital fabrication, and prototyping in Jerusalem
+                  </div>
                 </div>
                 <div class="additional-item">
-                  <span class="additional-role"
-                    >Computational Designer</span
-                  >
+                  <div class="additional-header">
+                    <h4 class="additional-role">Computational Designer</h4>
+                    <span class="additional-date">2017</span>
+                  </div>
                   <span class="additional-org">ParaGroup</span>
-                  <span class="additional-date">2017</span>
-                  <span class="additional-desc"
-                    ><strong>Algorithmic design tools</strong> for complex projects</span
-                  >
+                  <div class="additional-desc">
+                    <strong>Algorithmic design tools</strong> for complex projects
+                  </div>
                 </div>
                 <div class="additional-item">
-                  <span class="additional-role">QA Team Lead</span>
+                  <div class="additional-header">
+                    <h4 class="additional-role">QA Team Lead</h4>
+                    <span class="additional-date">2012</span>
+                  </div>
                   <span class="additional-org">SmartType (Dov Moran)</span>
-                  <span class="additional-date">2012</span>
-                  <span class="additional-desc"
-                    >Led <strong>QA team</strong> for mobile tech startup</span
-                  >
+                  <div class="additional-desc">
+                    Led <strong>QA team</strong> for mobile tech startup
+                  </div>
                 </div>
               </div>
             </div>
@@ -389,27 +528,55 @@
           <span class="section-line"></span>
         </div>
 
-        <div class="edu-grid">
-          <div class="edu-card">
-            <div class="edu-icon"><img src="https://upload.wikimedia.org/wikipedia/he/thumb/3/30/Bezalel_Academy_of_Arts_and_Design_logo.png/200px-Bezalel_Academy_of_Arts_and_Design_logo.png" alt="Bezalel Logo" class="edu-logo-img"></div>
-            <div class="edu-content">
-              <h3 class="edu-degree">Bachelor of Architecture (B.Arch)</h3>
-              <span class="edu-school">Bezalel Academy of Art and Design</span>
-              <span class="edu-years">2012 - 2017</span>
-              <div class="edu-details-text">
-                <strong>Final thesis</strong>: Data-driven urban planning with <strong>neural network algorithms</strong>
+        <div class="timeline">
+          <!-- Bezalel Academy -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <div class="marker-dot"></div>
+              <div class="marker-line"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="job-header static">
+                <div class="job-info">
+                  <h3 class="job-company">
+                    BEZALEL ACADEMY
+                    <img src="https://play-lh.googleusercontent.com/Z4QwZUnC9CsE0UJuIF-nVsRKthqozPZozCWvXRVFkgLxhjFA1j_RFQtqwS2KUXmvWdc_" alt="Bezalel Academy Logo" class="company-logo-inline edu-logo-inline">
+                  </h3>
+                  <span class="job-title">Bachelor of Architecture (B.Arch)</span>
+                </div>
+                <div class="job-meta">
+                  <span class="job-location">Jerusalem, Israel</span>
+                  <span class="job-date">2012 → 2017</span>
+                </div>
+              </div>
+              <div class="job-summary">
+                <strong>Final thesis</strong>: Data-driven urban planning with <strong>neural network algorithms</strong>.
               </div>
             </div>
           </div>
 
-          <div class="edu-card military">
-            <div class="edu-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Unit_8200_Logo.svg/200px-Unit_8200_Logo.svg.png" alt="8200 Logo" class="edu-logo-img"></div>
-            <div class="edu-content">
-              <h3 class="edu-degree">Intelligence Analyst & Commander</h3>
-              <span class="edu-school">IDF Unit 8200</span>
-              <span class="edu-years">2008 - 2011</span>
-              <div class="edu-details-text">
-                Intelligence Force Course graduate, developed <strong>analytical methodologies</strong> and led team operations
+          <!-- IDF Unit 8200 -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <div class="marker-dot"></div>
+              <div class="marker-line"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="job-header static">
+                <div class="job-info">
+                  <h3 class="job-company">
+                    IDF UNIT 8200
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/AmanLogo.svg" alt="IDF Unit 8200 Logo" class="company-logo-inline edu-logo-inline">
+                  </h3>
+                  <span class="job-title">Intelligence Analyst & Commander</span>
+                </div>
+                <div class="job-meta">
+                  <span class="job-location">Israel</span>
+                  <span class="job-date">2008 → 2011</span>
+                </div>
+              </div>
+              <div class="job-summary">
+                Intelligence Force Course graduate, developed <strong>analytical methodologies</strong> and led team operations.
               </div>
             </div>
           </div>
@@ -425,41 +592,54 @@
         </div>
 
         <div class="skills-container">
+          <!-- Product Tools -->
           <div class="skill-category">
             <h4 class="category-title">Product Tools</h4>
             <div class="skill-tags">
-              <span class="skill-tag">📊 Jira</span>
-              <span class="skill-tag">📝 Confluence</span>
-              <span class="skill-tag">📅 Monday.com</span>
-              <span class="skill-tag">☁️ AWS</span>
-              <span class="skill-tag">📈 Logz.io</span>
+              <span class="skill-tag"><img src="https://cdn.simpleicons.org/jira" alt="Jira"> Jira</span>
+              <span class="skill-tag"><img src="https://cdn.simpleicons.org/confluence" alt="Confluence"> Confluence</span>
+              <span class="skill-tag"><img src="https://monday.com/p/wp-content/uploads/2020/07/monday-200x200-1.png" alt="Monday"> Monday.com</span>
+              <span class="skill-tag"><img src="https://media.glassdoor.com/sqll/1882910/logz-io-squareLogo-1679231434665.png" alt="Logz.io"> Logz.io</span>
+              <span class="skill-tag"><img src="https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/1/apache-superset-icon-cyc19fiufldpekdt6c7jg.png/apache-superset-icon-80ygkwbe76iyhvftejjahm.png?_a=DATAg1AAZAA0" alt="Superset"> Superset</span>
+              <span class="skill-tag"><img src="https://cdn.simpleicons.org/matomo" alt="Matomo"> Matomo</span>
             </div>
           </div>
+
+          <!-- Development -->
           <div class="skill-category">
             <h4 class="category-title">Development</h4>
             <div class="skill-tags">
-              <span class="skill-tag highlight">🐙 GitHub</span>
-              <span class="skill-tag highlight">⌨️ Cursor IDE</span>
-              <span class="skill-tag highlight">🤖 LLM API Integration</span>
+              <span class="skill-tag"><img src="https://cdn.simpleicons.org/github" alt="GitHub"> GitHub</span>
+              <span class="skill-tag"><img src="https://framerusercontent.com/images/lfSBU4EhKcMg3iGg98L2F1ESfA.jpg" alt="Cursor"> AI IDE (Cursor)</span>
+              <span class="skill-tag">LLM API Integration</span>
+              <span class="skill-tag"><img src="https://download.logo.wine/logo/Amazon_Web_Services/Amazon_Web_Services-Logo.wine.png" alt="AWS"> AWS</span>
+              <span class="skill-tag">Vibe Coding Apps</span>
             </div>
           </div>
+
+          <!-- CAD/3D -->
           <div class="skill-category">
             <h4 class="category-title">CAD/3D</h4>
             <div class="skill-tags">
-              <span class="skill-tag">🦏 Rhino</span>
-              <span class="skill-tag">🦟 Grasshopper</span>
-              <span class="skill-tag">🐍 Grasshopper Python</span>
-              <span class="skill-tag">🏗️ Revit</span>
-              <span class="skill-tag">📐 AutoCAD</span>
-              <span class="skill-tag">⚙️ Solidworks</span>
+              <span class="skill-tag"><img src="https://img.icons8.com/ios_filled/1200/rhinoceros-6.jpg" alt="Rhino"> Rhino</span>
+              <span class="skill-tag"><img src="https://images.seeklogo.com/logo-png/29/2/grasshopper-3d-logo-png_seeklogo-291372.png" alt="Grasshopper"> Grasshopper</span>
+              <span class="skill-tag"><img src="https://cdn.simpleicons.org/python" alt="Python"> Python</span>
+              <span class="skill-tag"><img src="https://cdn.simpleicons.org/autodesk" alt="Revit"> Revit</span>
+              <span class="skill-tag"><img src="https://pbs.twimg.com/media/Ed2pr6PXYAE8KPZ.png" alt="Dynamo"> Dynamo</span>
+              <span class="skill-tag"><img src="https://cdn.simpleicons.org/autocad" alt="AutoCAD"> AutoCAD</span>
+              <span class="skill-tag"><img src="https://cdn.simpleicons.org/dassaultsystemes" alt="Solidworks"> Solidworks</span>
             </div>
           </div>
+
+          <!-- Design -->
           <div class="skill-category">
             <h4 class="category-title">Design</h4>
             <div class="skill-tags">
-              <span class="skill-tag">🎨 Adobe Creative Suite</span>
+              <span class="skill-tag"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Adobe_Creative_Cloud_rainbow_icon.svg/1200px-Adobe_Creative_Cloud_rainbow_icon.svg.png" alt="Adobe"> Adobe Creative Suite</span>
             </div>
           </div>
+
+          <!-- Languages -->
           <div class="skill-category">
             <h4 class="category-title">Languages</h4>
             <div class="skill-tags">
@@ -484,7 +664,7 @@
             >
             <span class="footer-divider">|</span>
             <a
-              href="https://linkedin.com/in/noamburg"
+              href="https://www.linkedin.com/in/noam-burg-0ab48b14a/"
               target="_blank"
               class="footer-link"
               >LinkedIn</a
