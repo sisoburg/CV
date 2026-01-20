@@ -676,12 +676,12 @@ function createPrintableCV() {
         
         @media print {
             body {
-                padding: 0;
+                padding: 1.5cm !important;
                 -webkit-print-color-adjust: exact;
                 print-color-adjust: exact;
             }
             @page {
-                margin: 0.5in;
+                margin: 0;
             }
         }
     </style>
@@ -750,7 +750,7 @@ function createPrintableCV() {
         </ul>
     </div>
     
-    <div class="section-unit">
+    <div class="section-unit" style="break-before: page; padding-top: 20px;">
         <div class="job-header">
             <h3>
                 <img src="${logos.hqa}" class="company-logo-printable">
@@ -811,8 +811,9 @@ function createPrintableCV() {
                 <div class="skill-item"><img class="skill-icon" src="https://cdn.simpleicons.org/jira"> Jira</div>
                 <div class="skill-item"><img class="skill-icon" src="https://cdn.simpleicons.org/confluence"> Confluence</div>
                 <div class="skill-item"><img class="skill-icon" src="https://monday.com/p/wp-content/uploads/2020/07/monday-200x200-1.png"> Monday.com</div>
-                <div class="skill-item"><img class="skill-icon" src="https://download.logo.wine/logo/Amazon_Web_Services/Amazon_Web_Services-Logo.wine.png"> AWS</div>
                 <div class="skill-item"><img class="skill-icon" src="https://media.glassdoor.com/sqll/1882910/logz-io-squareLogo-1679231434665.png"> Logz.io</div>
+                <div class="skill-item"><img class="skill-icon" src="https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/1/apache-superset-icon-cyc19fiufldpekdt6c7jg.png/apache-superset-icon-80ygkwbe76iyhvftejjahm.png?_a=DATAg1AAZAA0"> Superset</div>
+                <div class="skill-item"><img class="skill-icon" src="https://avatars.githubusercontent.com/u/698038?v=4"> Matomo</div>
             </div>
         </div>
         <div class="skills-category">
@@ -821,6 +822,7 @@ function createPrintableCV() {
                 <div class="skill-item"><img class="skill-icon" src="https://cdn.simpleicons.org/github"> GitHub</div>
                 <div class="skill-item"><img class="skill-icon" src="https://framerusercontent.com/images/lfSBU4EhKcMg3iGg98L2F1ESfA.jpg"> AI IDE (Cursor)</div>
                 <div class="skill-item">LLM API Integration</div>
+                <div class="skill-item"><img class="skill-icon" src="https://download.logo.wine/logo/Amazon_Web_Services/Amazon_Web_Services-Logo.wine.png"> AWS</div>
             </div>
         </div>
         <div class="skills-category">
