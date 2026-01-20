@@ -6,27 +6,39 @@
 
 /* CSS Custom Properties */
 :root {
-  /* Colors - Minimalist palette */
-  --color-bg: #f5f5f3;
-  --color-bg-light: #fafaf8;
-  --color-grid: #e0e0dc;
-  --color-grid-strong: #c8c8c4;
-  --color-text: #1a1a1a;
-  --color-text-muted: #666666;
-  --color-text-light: #999999;
-  --color-accent: #2d2d2d;
+  /* Colors - Vibrant Palette Upgrade */
+  --color-bg: #ffffff;      /* Cleaner white */
+  --color-bg-light: #f8f9fa;
+  --color-grid: #e9ecef;
+  --color-grid-strong: #ced4da;
+  
+  --color-text: #2d3436;
+  --color-text-muted: #636e72;
+  --color-text-light: #b2bec3;
+  
+  /* New Vibrant Palette */
+  --col-orange: #FF9F43;
+  --col-pink: #FD79A8;
+  --col-blue: #0984E3;
+  --col-green: #00B894;
+  --col-yellow: #FDCB6E;
+  --col-purple: #6C5CE7;
+  --col-teal: #00CEC9;
+  --col-red: #D63031;
+
+  --color-accent: var(--col-blue);
   --color-accent-hover: #000000;
 
-  /* Accent colors for tags */
-  --color-ai: #4a7c59;
-  --color-tech: #5c6bc0;
-  --color-algorithm: #7b5ea7;
-  --color-leadership: #c47f3c;
-  --color-agile: #3d9970;
-  --color-operations: #6d8299;
-  --color-data: #8c7853;
-  --color-team: #7986cb;
-  --color-special: #c94c4c;
+  /* Accent colors for tags - Mapped to new palette */
+  --color-ai: var(--col-green);
+  --color-tech: var(--col-blue);
+  --color-algorithm: var(--col-purple);
+  --color-leadership: var(--col-orange);
+  --color-agile: var(--col-teal);
+  --color-operations: var(--col-blue);
+  --color-data: var(--col-yellow);
+  --color-team: var(--col-pink);
+  --color-special: var(--col-red);
 
   /* Typography */
   --font-display: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
@@ -124,7 +136,10 @@ body {
 .cursor-follower.hover {
   width: 60px;
   height: 60px;
-  background: rgba(0, 0, 0, 0.05);
+  background: var(--cursor-color, rgba(0, 206, 201, 0.1));
+  opacity: 0.3;
+  border-color: var(--cursor-color, var(--col-teal));
+  mix-blend-mode: normal;
 }
 
 /* Navigation */
@@ -219,7 +234,7 @@ body {
   align-items: center;
   gap: var(--space-sm);
   padding: var(--space-sm) var(--space-lg);
-  background: var(--color-text);
+  background: var(--col-pink);
   color: var(--color-bg);
   border: none;
   font-family: var(--font-mono);
@@ -350,8 +365,8 @@ body {
 }
 
 .name-line.accent:hover {
-  color: var(--color-text);
-  -webkit-text-stroke: 0;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--col-pink);
 }
 
 .hero-summary {
@@ -364,19 +379,15 @@ body {
 
 .hero-summary .highlight {
   color: var(--color-text);
-  font-weight: 600;
+  font-weight: 700;
   position: relative;
+  background: rgba(0, 206, 201, 0.2);
+  padding: 0 4px;
+  border-bottom: none;
 }
 
 .hero-summary .highlight::after {
-  content: "";
-  position: absolute;
-  bottom: 2px;
-  left: 0;
-  width: 100%;
-  height: 6px;
-  background: rgba(74, 124, 89, 0.2);
-  z-index: -1;
+  content: none;
 }
 
 .hero-contact {
@@ -435,7 +446,7 @@ body {
   width: 100%;
   height: 100%;
   background: url("profile.jpg") center center / cover no-repeat;
-  filter: grayscale(100%);
+  filter: grayscale(40%);
   transition: filter var(--transition-slow);
   position: relative;
   z-index: 2;
@@ -711,33 +722,30 @@ body {
   transform: translateY(0);
 }
 
-.competency-card[data-category="ai"] .card-desc {
-  background: var(--color-ai);
+/* Highlight selected cards significantly */
+.competency-card[data-category="ai"],
+.competency-card[data-category="automation"],
+.competency-card[data-category="leadership"],
+.competency-card[data-category="construction"] {
+  background: #fff;
+  border-color: transparent;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
-.competency-card[data-category="construction"] .card-desc {
-  background: var(--color-tech);
-}
-.competency-card[data-category="strategy"] .card-desc {
-  background: var(--color-leadership);
-}
-.competency-card[data-category="manufacturing"] .card-desc {
-  background: var(--color-operations);
-}
-.competency-card[data-category="platform"] .card-desc {
-  background: var(--color-algorithm);
-}
-.competency-card[data-category="algorithm"] .card-desc {
-  background: var(--color-data);
-}
-.competency-card[data-category="leadership"] .card-desc {
-  background: var(--color-special);
-}
-.competency-card[data-category="automation"] .card-desc {
-  background: var(--color-agile);
-}
-.competency-card[data-category="erp"] .card-desc {
-  background: var(--color-team);
-}
+
+.competency-card[data-category="ai"] { border-top: 4px solid var(--color-ai); }
+.competency-card[data-category="automation"] { border-top: 4px solid var(--color-agile); }
+.competency-card[data-category="leadership"] { border-top: 4px solid var(--color-leadership); }
+.competency-card[data-category="construction"] { border-top: 4px solid var(--color-tech); }
+
+.competency-card[data-category="ai"] .card-desc { background: var(--color-ai); }
+.competency-card[data-category="construction"] .card-desc { background: var(--color-tech); }
+.competency-card[data-category="strategy"] .card-desc { background: var(--color-leadership); }
+.competency-card[data-category="manufacturing"] .card-desc { background: var(--col-teal); } /* Fixed transparent issue */
+.competency-card[data-category="platform"] .card-desc { background: var(--color-algorithm); }
+.competency-card[data-category="algorithm"] .card-desc { background: var(--color-data); color: #000; } /* Fixed contrast */
+.competency-card[data-category="leadership"] .card-desc { background: var(--color-leadership); } /* Fixed Red hover */
+.competency-card[data-category="automation"] .card-desc { background: var(--color-agile); }
+.competency-card[data-category="erp"] .card-desc { background: var(--color-team); }
 
 /* Colored Icons for Emphasis */
 .competency-card[data-category="ai"] .card-icon {
@@ -953,6 +961,11 @@ body {
   background: var(--color-bg-light);
   border: var(--border-thin);
   position: relative;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--color-text); /* Darker text */
+  font-weight: 500;
+  white-space: nowrap;
 }
 
 .job-date::after {
@@ -1063,6 +1076,7 @@ body {
 }
 
 .achievement-item {
+  position: relative;
   display: block;
   padding: var(--space-md);
   background: var(--color-bg-light);
@@ -1071,6 +1085,42 @@ body {
   line-height: 1.6;
   color: var(--color-text-muted);
   transition: all var(--transition-fast);
+}
+
+.achievement-link-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: white;
+  border: 1px solid var(--color-grid-strong);
+  border-radius: 4px;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  z-index: 5;
+  opacity: 0.6;
+}
+
+.achievement-link-btn:hover {
+  background: var(--color-text);
+  color: white;
+  border-color: var(--color-text);
+  opacity: 1;
+}
+
+.achievement-link-btn svg {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .achievement-header {
@@ -1173,6 +1223,7 @@ body {
 .additional-item {
   display: flex;
   flex-direction: column;
+  gap: var(--space-xs);
   padding: var(--space-md);
   background: white;
   border-left: 3px solid var(--color-grid-strong);
@@ -1212,7 +1263,6 @@ body {
   color: var(--color-text-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  margin-bottom: var(--space-sm);
   display: block;
 }
 
@@ -1449,6 +1499,10 @@ body {
     display: none;
   }
 
+  .cursor-follower {
+    display: none !important;
+  }
+
   .hero {
     padding: var(--space-xl);
     padding-bottom: 8rem; /* Ensure space for scroll indicator */
@@ -1520,6 +1574,30 @@ body {
   }
 }
 
+/* Custom Highlights for Bezalel & Structure */
+.highlight-card {
+  position: relative;
+  background: linear-gradient(90deg, rgba(253, 203, 110, 0.1), rgba(255, 255, 255, 0));
+  border-left: 3px solid var(--col-orange);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: 0 var(--space-sm) var(--space-sm) 0;
+}
+
+.org-with-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.company-logo-mini {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #fff;
+  border: 1px solid var(--color-grid);
+}
+
 /* Print Styles */
 @media print {
   .nav-bar,
@@ -1541,5 +1619,30 @@ body {
 
   .edu-thesis {
     display: block !important;
+  }
+}
+
+/* Click Ripple Effect */
+.click-ripple {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  animation: clickRipple 0.6s ease-out forwards;
+}
+
+@keyframes clickRipple {
+  0% {
+    width: 0;
+    height: 0;
+    background-color: var(--col-blue);
+    opacity: 0.8;
+  }
+  100% {
+    width: 100px;
+    height: 100px;
+    background-color: var(--col-blue);
+    opacity: 0;
   }
 }
